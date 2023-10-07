@@ -7,6 +7,8 @@ const friction = 10000
 @onready var animations = $AnimationPlayer
 var input = Vector2.ZERO
 
+#This is a test comment for testing commits
+
 @export var inventory: Inventory
 
 
