@@ -7,9 +7,17 @@ const friction = 10000
 @onready var animations = $AnimationPlayer
 var input = Vector2.ZERO
 
+@onready var animation_tree : AnimationTree = $AnimationTree
+
 #This is a test comment for testing commits
 
 @export var inventory: Inventory
+
+var direction : Vector2 = Vector2.ZERO
+
+
+func _ready():
+	animation_tree.active = true
 
 
 func player():
@@ -65,3 +73,15 @@ func _physics_process(delta):
 func _on_hurtbox_area_entered(area):
 	if area.has_method("collect"):
 		area.collect()
+
+
+func update_animation_parameters():
+	if (velocity == Vector2.ZERO):
+		animation_tree["parameters/conditions/idle"] = true
+		animation_tree["parameters/conditions/is_moving"] = false
+	else:
+		animation_tree["parameters/conditions/idle"] = false
+		animation_tree["parameters/conditions/is_moving"] = true
+
+	animation_tree["parameters/Idle/blend_position"] = direction
+	animation_tree["parameters/Move/blend_position"] = direction
