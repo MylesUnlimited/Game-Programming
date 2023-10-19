@@ -2,6 +2,7 @@
 
 extends Node2D
 
+var PLAYER = preload("res://Player/player8.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,6 +13,7 @@ func _ready():
 func _process(delta):
 	change_scene()
 
+#TEST
 
 func _on_transition_point_body_entered(body):
 	if body.has_method("player"):
