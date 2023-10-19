@@ -1,2 +1,7 @@
-res://Scenes/world.tscn
+res://scripts/global.gd
+res://Scenes/other_world.gd
+res://Player/player8.gd
 res://world.gd
+res://Scenes/world.tscn
+res://Scenes/other_world.tscn
+res://Player/player8.tscn

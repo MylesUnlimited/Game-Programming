@@ -16,5 +16,4 @@ func finish_changescene():
 			current_scene = "other_world"
 		else:
 			current_scene = "world"
-			
 		
