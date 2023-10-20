@@ -72,7 +72,7 @@ func _physics_process(delta):
 
 func _on_hurtbox_area_entered(area):
 	if area.has_method("collect"):
-		area.collect()
+		area.collect(inventory)
 
 
 func update_animation_parameters():

@@ -1,8 +1,5 @@
-extends Area2D
-
-@export var itemRes: InventoryItem
+extends "res://Items/Item.gd"
 
 func collect(inventory: Inventory):
-	inventory.insert(itemRes)
-	queue_free()
+	super(inventory)
 	

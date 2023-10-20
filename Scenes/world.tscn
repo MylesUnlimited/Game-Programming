@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://4qnaly8iwqce"]
+[gd_scene load_steps=12 format=3 uid="uid://4qnaly8iwqce"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_5wtqm"]
 [ext_resource type="Texture2D" uid="uid://de2k75b7wiow6" path="res://Art/TilesetDesert.png" id="2_bvvct"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://deq3etl7l701p" path="res://Player/player8.tscn" id="6_6nerd"]
 [ext_resource type="PackedScene" uid="uid://jvw58cl7d5v3" path="res://UI/inventory.tscn" id="7_bu0j0"]
 [ext_resource type="Script" path="res://UI/CanvasLayer.gd" id="7_rlld8"]
+[ext_resource type="PackedScene" uid="uid://0wrrbc524qca" path="res://Items/key.tscn" id="8_put6c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qflvg"]
 texture = ExtResource("2_bvvct")
@@ -761,6 +762,9 @@ offset_right = 67.0
 offset_bottom = 40.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="key" parent="." instance=ExtResource("8_put6c")]
+position = Vector2(198, 254)
 
 [connection signal="body_entered" from="transition_point" to="." method="_on_transition_point_body_entered"]
 [connection signal="body_exited" from="transition_point" to="." method="_on_transition_point_body_exited"]
