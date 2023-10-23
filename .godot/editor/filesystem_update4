@@ -1,16 +1,9 @@
 res://Scenes/world.tscn
-res://Player/player8.tscn
-res://Player/player.tscn
-res://Items/key.tscn
-res://Items/Key.gd
-res://Player/player8.gd
-res://UI/slot.tscn
-res://Items/Item.tscn
-res://inventory/inventory.gd
 res://inventory/player_inv.tres
-res://UI/inventory_script.gd
-res://inventory/inventory item.gd
-res://Items/Item.gd
-res://Scenes/other_world.gd
-res://UI/slot.gd
+res://Player/player8.tscn
+res://UI/slot.tscn
+res://Items/key.tscn
+res://Items/Item.tscn
+res://Scenes/other_world.tscn
 res://world.gd
+res://Scenes/other_world.gd

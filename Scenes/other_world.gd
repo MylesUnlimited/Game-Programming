@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_transition_point_body_entered(body):
-	if body.has_method("player") && global.has_key == true:
+	if body.has_method("player") == true:
 		# print(global.transition_scene)
 		global.transition_scene = true
 		# print(global.transition_scene)

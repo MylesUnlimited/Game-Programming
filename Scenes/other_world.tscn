@@ -683,7 +683,6 @@ position = Vector2(196.5, 282)
 shape = SubResource("RectangleShape2D_y4lnq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("7_e855t")
 
 [node name="Inventory" parent="CanvasLayer" instance=ExtResource("8_wotj2")]

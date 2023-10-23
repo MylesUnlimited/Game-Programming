@@ -12,3 +12,11 @@ func insert(item: InventoryItem):
 			items[i] = item
 			break
 	updated.emit()
+	
+func remove(item: InventoryItem):
+	for i in range(items.size()):
+		if item == items[i]:
+			items[i] = null
+			break
+	updated.emit()
+	

@@ -766,5 +766,8 @@ grow_vertical = 2
 [node name="key" parent="." instance=ExtResource("8_put6c")]
 position = Vector2(198, 254)
 
+[node name="key2" parent="." instance=ExtResource("8_put6c")]
+position = Vector2(261, 220)
+
 [connection signal="body_entered" from="transition_point" to="." method="_on_transition_point_body_entered"]
 [connection signal="body_exited" from="transition_point" to="." method="_on_transition_point_body_exited"]
