@@ -12,11 +12,23 @@ func insert(item: InventoryItem):
 			items[i] = item
 			break
 	updated.emit()
-	
-func remove(item: InventoryItem):
+
+func retrieve(item: InventoryItem):
+	if !found(item):
+		#throw exception
+		print("bug")
 	for i in range(items.size()):
 		if item == items[i]:
 			items[i] = null
-			break
+			break		
 	updated.emit()
+
 	
+func found(item: InventoryItem) -> bool:
+	for i in range(items.size()):
+		if item == items[i]:
+			return true	
+	return false
+		
+		
+		

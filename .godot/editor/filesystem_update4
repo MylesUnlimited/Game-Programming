@@ -5,5 +5,4 @@ res://UI/slot.tscn
 res://Items/key.tscn
 res://Items/Item.tscn
 res://Scenes/other_world.tscn
-res://world.gd
-res://Scenes/other_world.gd
+res://inventory/inventory.gd
