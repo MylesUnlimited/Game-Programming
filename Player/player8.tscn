@@ -290,6 +290,8 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(116.1, -8.93252)
 
 [node name="Player8" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_mf2ay")
 inventory = ExtResource("2_7f0ds")
 

@@ -1,8 +1,9 @@
 res://Scenes/world.tscn
-res://inventory/player_inv.tres
 res://Player/player8.tscn
-res://UI/slot.tscn
+res://Player/player.tscn
+res://UI/inventory.tscn
+res://Interactables/lock.tscn
+res://Interactables/lock.gd
+res://Items/Key.gd
+res://Enemies/key.tscn
 res://Items/key.tscn
-res://Items/Item.tscn
-res://Scenes/other_world.tscn
-res://inventory/inventory.gd
