@@ -3,7 +3,6 @@ res://Player/player8.tscn
 res://Player/player.tscn
 res://UI/inventory.tscn
 res://Interactables/lock.tscn
-res://Interactables/lock.gd
-res://Items/Key.gd
-res://Enemies/key.tscn
 res://Items/key.tscn
+res://Interactables/pushable_block.tscn
+res://Interactables/lock.gd

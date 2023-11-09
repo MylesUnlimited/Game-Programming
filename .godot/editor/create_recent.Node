@@ -1,4 +1,5 @@
 CollisionShape2D
 Area2D
-CharacterBody2D
 Sprite2D
+RigidBody2D
+CharacterBody2D

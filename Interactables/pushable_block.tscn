@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://1lbbgf1ep4u7"]
+
+[ext_resource type="Texture2D" uid="uid://jeiiwrivkyj" path="res://Art/2_indoors.png" id="1_dka3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_teb52"]
+size = Vector2(28, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rr3ds"]
+size = Vector2(28, 28)
+
+[node name="pushable_block" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_teb52")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dka3x")
+hframes = 10
+vframes = 11
+frame = 6
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_rr3ds")
