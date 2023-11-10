@@ -1,12 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1ft4pq7ugxod"]
+[gd_scene load_steps=14 format=3 uid="uid://c1ft4pq7ugxod"]
 
 [ext_resource type="Texture2D" uid="uid://de2k75b7wiow6" path="res://Art/TilesetDesert.png" id="1_ai7l7"]
 [ext_resource type="Script" path="res://Scenes/other_world.gd" id="1_tcg7m"]
 [ext_resource type="PackedScene" uid="uid://deq3etl7l701p" path="res://Player/player8.tscn" id="2_npffv"]
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="4_ol1yp"]
 [ext_resource type="Script" path="res://UI/CanvasLayer.gd" id="7_e855t"]
+[ext_resource type="PackedScene" uid="uid://cclmqu2erk3hs" path="res://Interactables/lock-button.tscn" id="8_4cikp"]
 [ext_resource type="PackedScene" uid="uid://0wrrbc524qca" path="res://Items/key.tscn" id="8_pmqrr"]
 [ext_resource type="PackedScene" uid="uid://jvw58cl7d5v3" path="res://UI/inventory.tscn" id="8_wotj2"]
+[ext_resource type="PackedScene" uid="uid://lokgjlnc3rxc" path="res://Interactables/pushable_block.tscn" id="9_tawn6"]
+[ext_resource type="PackedScene" uid="uid://ymixf3fwrq2i" path="res://Interactables/button.tscn" id="10_a7ab0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01cky"]
 texture = ExtResource("1_ai7l7")
@@ -660,7 +663,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
 layer_1/z_index = 1
-layer_1/tile_data = PackedInt32Array()
+layer_1/tile_data = PackedInt32Array(262152, 131072, 3, 262159, 131072, 3, 327695, 131072, 4, 393231, 131072, 4, 458767, 131072, 4, 524303, 131072, 4, 589839, 131072, 4, 655375, 131072, 4, 720911, 0, 5, 720904, 0, 5, 720905, 65536, 5, 720906, 65536, 5, 720909, 65536, 5, 720910, 65536, 5, 655368, 131072, 4, 589832, 131072, 4, 524296, 131072, 4, 458760, 131072, 4, 393224, 131072, 4, 327688, 131072, 4, 262153, 65536, 5, 262154, 65536, 5, 262155, 65536, 5, 262156, 65536, 5, 262157, 65536, 5, 262158, 65536, 5)
 
 [node name="Player8" parent="TileMap" instance=ExtResource("2_npffv")]
 position = Vector2(195, 248)
@@ -677,6 +680,7 @@ tilemap = NodePath("../..")
 polygon = PackedVector2Array(4, -3, 417, -1, 417, 271, 234, 273, 233, 325, 160, 325, 160, 273, 0, 272, 1, -3, 2, -4, -1, -4, -3, 333, 441, 330, 433, -9, 7, -10)
 
 [node name="transition_point" type="Area2D" parent="."]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="transition_point"]
 position = Vector2(196.5, 282)
@@ -686,6 +690,7 @@ shape = SubResource("RectangleShape2D_y4lnq")
 script = ExtResource("7_e855t")
 
 [node name="Inventory" parent="CanvasLayer" instance=ExtResource("8_wotj2")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -701,5 +706,31 @@ grow_vertical = 2
 [node name="key" parent="." instance=ExtResource("8_pmqrr")]
 position = Vector2(195, 128)
 
+[node name="lock-button" parent="." instance=ExtResource("8_4cikp")]
+position = Vector2(185, 185)
+
+[node name="lock-button2" parent="." instance=ExtResource("8_4cikp")]
+position = Vector2(201, 185)
+
+[node name="button2" parent="." instance=ExtResource("10_a7ab0")]
+position = Vector2(335, 52)
+collision_mask = 7
+
+[node name="button" parent="." instance=ExtResource("10_a7ab0")]
+position = Vector2(57, 47)
+collision_mask = 7
+
+[node name="pushable_block" parent="." instance=ExtResource("9_tawn6")]
+position = Vector2(333, 195)
+collision_layer = 4
+collision_mask = 7
+
+[node name="pushable_block2" parent="." instance=ExtResource("9_tawn6")]
+position = Vector2(62, 194)
+collision_layer = 4
+collision_mask = 7
+
 [connection signal="body_entered" from="transition_point" to="." method="_on_transition_point_body_entered"]
 [connection signal="body_exited" from="transition_point" to="." method="_on_transition_point_body_exited"]
+[connection signal="body_entered" from="button2" to="." method="_on_button_2_body_entered"]
+[connection signal="body_entered" from="button" to="." method="_on_button_body_entered"]

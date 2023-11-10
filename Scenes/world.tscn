@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://4qnaly8iwqce"]
+[gd_scene load_steps=15 format=3 uid="uid://4qnaly8iwqce"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_5wtqm"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_vb8b7"]
 [ext_resource type="Texture2D" uid="uid://de2k75b7wiow6" path="res://Art/TilesetDesert.png" id="2_bvvct"]
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="4_2q704"]
 [ext_resource type="PackedScene" uid="uid://b6h61jsa45xij" path="res://Enemies/spiritEnemy.tscn" id="5_gw2u0"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://UI/CanvasLayer.gd" id="7_rlld8"]
 [ext_resource type="PackedScene" uid="uid://0wrrbc524qca" path="res://Items/key.tscn" id="8_put6c"]
 [ext_resource type="PackedScene" uid="uid://b7k17edqqnvvx" path="res://Interactables/lock.tscn" id="9_13a1e"]
+[ext_resource type="PackedScene" uid="uid://lokgjlnc3rxc" path="res://Interactables/pushable_block.tscn" id="10_26nhp"]
+[ext_resource type="PackedScene" uid="uid://cclmqu2erk3hs" path="res://Interactables/lock-button.tscn" id="11_2p06l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qflvg"]
 texture = ExtResource("2_bvvct")
@@ -712,7 +714,7 @@ sources/0 = SubResource("TileSetAtlasSource_qflvg")
 size = Vector2(96, 39)
 
 [node name="world" type="Node2D"]
-script = ExtResource("1_5wtqm")
+script = ExtResource("1_vb8b7")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -750,6 +752,7 @@ build_mode = 1
 polygon = PackedVector2Array(12, -4, 264, 0, 266, -65, 367, -64, 365, -4, 692, 3, 690, 417, 2, 415, 1, -4, 9, -4, -6, -4, -19, 452, 687, 447, 711, 444, 716, -54, 204, -132)
 
 [node name="transition_point" type="Area2D" parent="."]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="transition_point"]
 position = Vector2(315, -19.5)
@@ -776,6 +779,14 @@ position = Vector2(143, 282)
 
 [node name="lock" parent="." instance=ExtResource("9_13a1e")]
 position = Vector2(313, 58)
+
+[node name="pushable_block" parent="." instance=ExtResource("10_26nhp")]
+position = Vector2(170, 49)
+collision_layer = 4
+collision_mask = 7
+
+[node name="lock-button" parent="." instance=ExtResource("11_2p06l")]
+position = Vector2(271, 142)
 
 [connection signal="body_entered" from="transition_point" to="." method="_on_transition_point_body_entered"]
 [connection signal="body_exited" from="transition_point" to="." method="_on_transition_point_body_exited"]

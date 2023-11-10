@@ -6,6 +6,7 @@ const accel = 10000
 const friction = 10000
 @onready var animations = $AnimationPlayer
 var input = Vector2.ZERO
+var col_idx
 
 @onready var animation_tree : AnimationTree = $AnimationTree
 
@@ -41,6 +42,7 @@ func playerMovement(delta):
 		velocity = velocity.limit_length(max_speed)
 	
 	move_and_slide()
+	
 	
 	
 func updateAnimation():

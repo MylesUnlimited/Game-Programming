@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 global="*res://scripts/global.gd"
 Inven="*res://inventory/inventory.gd"
 InvenItem="*res://inventory/inventory item.gd"
+World1="*res://scripts/world_1.gd"
+OtherWorldManagement="*res://scripts/other_world_management.gd"
 
 [display]
 

@@ -29,3 +29,15 @@ func change_scene():
 			global.finish_changescene()
 
 
+
+#Testing if buttons are pressed
+func _on_button_body_entered(body):
+	if body.has_method("pushable_block"):
+		OtherWorldManagement.buttons_pressed += 1
+		print(OtherWorldManagement.buttons_pressed)
+
+
+func _on_button_2_body_entered(body):
+	if body.has_method("pushable_block"):
+		OtherWorldManagement.buttons_pressed += 1
+		print(OtherWorldManagement.buttons_pressed)
