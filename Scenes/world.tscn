@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://UI/CanvasLayer.gd" id="7_rlld8"]
 [ext_resource type="PackedScene" uid="uid://0wrrbc524qca" path="res://Items/key.tscn" id="8_put6c"]
 [ext_resource type="PackedScene" uid="uid://b7k17edqqnvvx" path="res://Interactables/lock.tscn" id="9_13a1e"]
-[ext_resource type="PackedScene" uid="uid://lokgjlnc3rxc" path="res://Interactables/pushable_block.tscn" id="10_26nhp"]
+[ext_resource type="PackedScene" uid="uid://1lbbgf1ep4u7" path="res://Interactables/pushable_block.tscn" id="10_26nhp"]
 [ext_resource type="PackedScene" uid="uid://cclmqu2erk3hs" path="res://Interactables/lock-button.tscn" id="11_2p06l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qflvg"]

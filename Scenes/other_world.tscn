@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cclmqu2erk3hs" path="res://Interactables/lock-button.tscn" id="8_4cikp"]
 [ext_resource type="PackedScene" uid="uid://0wrrbc524qca" path="res://Items/key.tscn" id="8_pmqrr"]
 [ext_resource type="PackedScene" uid="uid://jvw58cl7d5v3" path="res://UI/inventory.tscn" id="8_wotj2"]
-[ext_resource type="PackedScene" uid="uid://lokgjlnc3rxc" path="res://Interactables/pushable_block.tscn" id="9_tawn6"]
+[ext_resource type="PackedScene" uid="uid://1lbbgf1ep4u7" path="res://Interactables/pushable_block.tscn" id="9_tawn6"]
 [ext_resource type="PackedScene" uid="uid://ymixf3fwrq2i" path="res://Interactables/button.tscn" id="10_a7ab0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01cky"]
@@ -173,6 +173,7 @@ texture = ExtResource("1_ai7l7")
 2:3/0 = 0
 2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:3/0 = 0
 3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:3/0/physics_layer_0/angular_velocity = 0.0
@@ -224,6 +225,7 @@ texture = ExtResource("1_ai7l7")
 2:4/0 = 0
 2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.75, -8, 2.4375, -8, 2.5, 8, -2.5625, 8)
 3:4/0 = 0
 3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:4/0/physics_layer_0/angular_velocity = 0.0
@@ -278,9 +280,12 @@ texture = ExtResource("1_ai7l7")
 0:5/0 = 0
 0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:5/0/physics_layer_0/angular_velocity = 0.0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:5/0 = 0
+1:5/0/y_sort_origin = -8
 1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.5625, -8, 5.6875, 8, 5.8125, 8, -2.625)
 4:5/0 = 0
 4:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:5/0/physics_layer_0/angular_velocity = 0.0
@@ -648,6 +653,7 @@ sources/0 = SubResource("TileSetAtlasSource_01cky")
 size = Vector2(73, 20)
 
 [node name="other world" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_tcg7m")
 
 [node name="TileMap" type="TileMap" parent="."]

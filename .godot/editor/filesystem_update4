@@ -4,16 +4,5 @@ res://Player/player.tscn
 res://UI/inventory.tscn
 res://Interactables/lock.tscn
 res://Items/key.tscn
-res://Scenes/other_world.tscn
 res://Interactables/pushable_block.tscn
-res://Player/player8.gd
-res://Interactables/pushable_block.gd
-res://Interactables/button.tscn
-res://Interactables/button.gd
-res://Interactables/lock-button.tscn
-res://Interactables/lock-button.gd
-res://other_world_management.gd
-res://scripts/other_world_management.gd
-res://Items/Item.tscn
-res://Scenes/test.gd
-res://Scenes/other_world.gd
+res://Scenes/other_world.tscn
