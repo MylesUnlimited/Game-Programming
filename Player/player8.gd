@@ -18,6 +18,10 @@ var direction : Vector2 = Vector2.ZERO
 
 func _ready():
 	animation_tree.active = true
+	
+
+func _process(delta):
+	update_animation_parameters()
 
 
 func player():
@@ -85,3 +89,18 @@ func update_animation_parameters():
 
 	animation_tree["parameters/Idle/blend_position"] = direction
 	animation_tree["parameters/Move/blend_position"] = direction
+	animation_tree["parameters/Attack/blend_position"] = direction
+	
+	if(velocity == Vector2.ZERO):
+		animation_tree["parameters/conditions/idle"] = true
+		animation_tree["parameters/conditions/is_moving"] = false
+	else:
+		animation_tree["parameters/conditions/idle"] = false
+		animation_tree["parameters/conditions/is_moving"] = true
+		
+	if(Input.is_action_just_pressed("attack")):
+		animation_tree["parameters/conditions/attack"] = true
+	else:
+		animation_tree["parameters/conditions/attack"] = false
+		
+		# Ferrari
