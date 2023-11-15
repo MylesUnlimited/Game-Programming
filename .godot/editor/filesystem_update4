@@ -1,8 +1,5 @@
+res://Scenes/other_world.tscn
 res://Scenes/world.tscn
 res://Player/player8.tscn
-res://Player/player.tscn
-res://UI/inventory.tscn
-res://Interactables/lock.tscn
-res://Items/key.tscn
 res://Interactables/pushable_block.tscn
-res://Scenes/other_world.tscn
+res://Interactables/button.tscn

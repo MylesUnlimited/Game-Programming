@@ -9,6 +9,7 @@ size = Vector2(26.6667, 26.6667)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ev1b5"]
 
 [node name="pushable_block" type="RigidBody2D"]
+y_sort_enabled = true
 gravity_scale = 0.0
 max_contacts_reported = 1
 can_sleep = false
