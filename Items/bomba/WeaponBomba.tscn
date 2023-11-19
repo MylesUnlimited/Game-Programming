@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4hsqe6u3g4k8"]
+
+[ext_resource type="Texture2D" uid="uid://bmwmdc16yv3m2" path="res://Art/bomba-test.png" id="1_4gioo"]
+[ext_resource type="Script" path="res://Items/bomba/WeaponBomba.gd" id="1_lxv7k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eo033"]
+radius = 50.2494
+
+[node name="WeaponBomba" type="Area2D"]
+script = ExtResource("1_lxv7k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_eo033")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4gioo")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

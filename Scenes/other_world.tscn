@@ -6,10 +6,10 @@
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="4_ol1yp"]
 [ext_resource type="Script" path="res://UI/CanvasLayer.gd" id="7_e855t"]
 [ext_resource type="PackedScene" uid="uid://cclmqu2erk3hs" path="res://Interactables/lock-button.tscn" id="8_4cikp"]
-[ext_resource type="PackedScene" uid="uid://0wrrbc524qca" path="res://Items/key.tscn" id="8_pmqrr"]
 [ext_resource type="PackedScene" uid="uid://jvw58cl7d5v3" path="res://UI/inventory.tscn" id="8_wotj2"]
 [ext_resource type="PackedScene" uid="uid://1lbbgf1ep4u7" path="res://Interactables/pushable_block.tscn" id="9_tawn6"]
 [ext_resource type="PackedScene" uid="uid://ymixf3fwrq2i" path="res://Interactables/button.tscn" id="10_a7ab0"]
+[ext_resource type="PackedScene" uid="uid://bb6rqasf3yg3n" path="res://Items/bomba/Bomba.tscn" id="10_oue83"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01cky"]
 texture = ExtResource("1_ai7l7")
@@ -675,6 +675,7 @@ layer_1/tile_data = PackedInt32Array(262152, 131072, 3, 262159, 131072, 3, 32769
 
 [node name="Player8" parent="TileMap" instance=ExtResource("2_npffv")]
 position = Vector2(195, 248)
+collision_mask = 7
 
 [node name="Camera2D" type="Camera2D" parent="TileMap/Player8" node_paths=PackedStringArray("tilemap")]
 limit_left = 0
@@ -710,9 +711,6 @@ offset_bottom = 40.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="key" parent="." instance=ExtResource("8_pmqrr")]
-position = Vector2(195, 128)
-
 [node name="lock-button" parent="." instance=ExtResource("8_4cikp")]
 position = Vector2(185, 185)
 
@@ -736,6 +734,9 @@ collision_mask = 7
 position = Vector2(62, 194)
 collision_layer = 4
 collision_mask = 7
+
+[node name="Bomba" parent="." instance=ExtResource("10_oue83")]
+position = Vector2(195, 132)
 
 [connection signal="body_entered" from="transition_point" to="." method="_on_transition_point_body_entered"]
 [connection signal="body_exited" from="transition_point" to="." method="_on_transition_point_body_exited"]
