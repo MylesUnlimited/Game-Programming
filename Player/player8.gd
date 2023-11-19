@@ -11,6 +11,8 @@ var push_force = 280.0
 
 @onready var animation_tree : AnimationTree = $AnimationTree
 
+@onready var animation_tree : AnimationTree = $AnimationTree
+
 #This is a test comment for testing commits
 
 signal bomba_placed(bomba_scene, location)
@@ -18,9 +20,7 @@ signal bomba_placed(bomba_scene, location)
 @export var inventory: Inventory
 
 var bomba_scene = preload('res://Items/bomba/WeaponBomba.tscn')
-
 @onready var placement = $CollisionShape2D
-
 var direction : Vector2 = Vector2.ZERO
 
 
@@ -95,6 +95,7 @@ func _on_hurtbox_area_entered(area):
 		area.collect(inventory)
 
 
+
 func update_animation_parameters():
 	if (velocity == Vector2.ZERO):
 		animation_tree["parameters/conditions/idle"] = true
@@ -105,7 +106,5 @@ func update_animation_parameters():
 
 	animation_tree["parameters/Idle/blend_position"] = direction
 	animation_tree["parameters/Move/blend_position"] = direction
-	
 func place_bomba():
 	bomba_placed.emit(bomba_scene,placement.global_position)
-
