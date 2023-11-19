@@ -6,13 +6,21 @@ const accel = 10000
 const friction = 10000
 @onready var animations = $AnimationPlayer
 var input = Vector2.ZERO
+var col_idx
+var push_force = 280.0
+
+@onready var animation_tree : AnimationTree = $AnimationTree
 
 @onready var animation_tree : AnimationTree = $AnimationTree
 
 #This is a test comment for testing commits
 
+signal bomba_placed(bomba_scene, location)
+
 @export var inventory: Inventory
 
+var bomba_scene = preload('res://Items/bomba/WeaponBomba.tscn')
+@onready var placement = $CollisionShape2D
 var direction : Vector2 = Vector2.ZERO
 
 
@@ -42,6 +50,13 @@ func playerMovement(delta):
 	
 	move_and_slide()
 	
+	#for collision with block purposes
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
+	
+
 	
 func updateAnimation():
 	if velocity.length() == 0:
@@ -64,6 +79,11 @@ func handleCollision():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		print_debug(collider.name)
+		
+func _process(delta):
+	if Input.is_action_just_pressed("bomba"):
+		place_bomba()
+		
 	
 func _physics_process(delta):
 	playerMovement(delta)
@@ -72,7 +92,8 @@ func _physics_process(delta):
 
 func _on_hurtbox_area_entered(area):
 	if area.has_method("collect"):
-		area.collect()
+		area.collect(inventory)
+
 
 
 func update_animation_parameters():
@@ -85,3 +106,5 @@ func update_animation_parameters():
 
 	animation_tree["parameters/Idle/blend_position"] = direction
 	animation_tree["parameters/Move/blend_position"] = direction
+func place_bomba():
+	bomba_placed.emit(bomba_scene,placement.global_position)

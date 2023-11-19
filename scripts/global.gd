@@ -2,7 +2,11 @@ extends Node
 
 var current_scene = "world" #base
 var transition_scene: bool = false
+
+#Important inventory item variables
 var has_key: bool = false
+var has_bomba: bool = false
+var bomba_count = 0
 
 var player_exit_world_x = 0
 var player_exit_world_y = 0
