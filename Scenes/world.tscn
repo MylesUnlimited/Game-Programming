@@ -1,6 +1,5 @@
 [gd_scene load_steps=21 format=3 uid="uid://4qnaly8iwqce"]
 
-[ext_resource type="Script" path="res://scripts/other_world2.gd" id="1_qoqfo"]
 [ext_resource type="Texture2D" uid="uid://de2k75b7wiow6" path="res://Art/TilesetDesert.png" id="2_bvvct"]
 [ext_resource type="Texture2D" uid="uid://cigfqr2exnbvd" path="res://Art/Backgrounds/Tilesets/TilesetField.png" id="3_eww84"]
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="4_2q704"]
@@ -15,6 +14,40 @@
 [ext_resource type="PackedScene" uid="uid://cclmqu2erk3hs" path="res://Interactables/lock-button.tscn" id="11_2p06l"]
 [ext_resource type="PackedScene" uid="uid://bpra87niwbsqt" path="res://Scenes/pause_menu.tscn" id="14_rirjm"]
 [ext_resource type="AudioStream" uid="uid://bt8mkn3wlo5pl" path="res://Background Music/8Bit Surf.wav" id="15_cilpi"]
+
+[sub_resource type="GDScript" id="GDScript_2iau8"]
+script/source = "#Akai Here
+
+extends Node2D
+#
+#
+#
+## Called when the node enters the scene tree for the first time.
+#
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	change_scene()
+#
+#
+#
+#
+func _on_transition_point_body_entered(body):
+	if body.has_method(\"player\"):
+		# print(global.transition_scene)
+		global.transition_scene = true
+		# print(global.transition_scene)
+
+
+func _on_transition_point_body_exited(body):
+	if body.has_method(\"player\"):
+		global.transition_scene = false
+
+func change_scene():
+	if global.transition_scene == true:
+		if global.current_scene == \"world\":
+			get_tree().change_scene_to_file(\"res://Scenes/other_world.tscn\")
+			global.finish_changescene()
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qflvg"]
 texture = ExtResource("2_bvvct")
@@ -2387,7 +2420,7 @@ sources/2 = SubResource("TileSetAtlasSource_vffq7")
 size = Vector2(96, 39)
 
 [node name="world" type="Node2D"]
-script = ExtResource("1_qoqfo")
+script = SubResource("GDScript_2iau8")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

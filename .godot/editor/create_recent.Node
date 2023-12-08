@@ -1,6 +1,6 @@
+AudioStreamPlayer2D
 Button
 CanvasLayer
-AudioStreamPlayer2D
 Label
 VBoxContainer
 HSlider
@@ -17,4 +17,3 @@ Polygon2D
 CharacterBody2D
 Node2D
 RigidBody2D
-

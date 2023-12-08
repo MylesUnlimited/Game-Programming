@@ -11,12 +11,12 @@ var push_force = 280.0
 
 @onready var animation_tree : AnimationTree = $AnimationTree
 
-<<<<<<< Updated upstream
-@onready var animation_tree : AnimationTree = $AnimationTree
-=======
+
+
+
 @onready var pause_menu = $TileMap/Player8/Camera2D/PauseMenu
 var paused = false
->>>>>>> Stashed changes
+
 
 #This is a test comment for testing commits
 
@@ -120,8 +120,7 @@ func update_animation_parameters():
 	animation_tree["parameters/Move/blend_position"] = direction
 func place_bomba():
 	bomba_placed.emit(bomba_scene,placement.global_position)
-<<<<<<< Updated upstream
-=======
+
 
 #func pauseMenu():
 #	if paused:
@@ -132,4 +131,4 @@ func place_bomba():
 #		Engine.time_scale = 0
 #
 #	paused = !paused
->>>>>>> Stashed changes
+
