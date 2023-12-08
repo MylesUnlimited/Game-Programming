@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://7iyb2wnaxk6j"]
+
+[ext_resource type="Texture2D" uid="uid://dhwe3ije680eb" path="res://Art/Pixalated Art 2.png" id="1_13i5i"]
+[ext_resource type="Script" path="res://Scenes/settings_menu.gd" id="1_o0lai"]
+[ext_resource type="Script" path="res://Scenes/BGMSlider.gd" id="2_h757i"]
+[ext_resource type="Script" path="res://Scenes/sound_settings.gd" id="2_su5e4"]
+[ext_resource type="AudioStream" uid="uid://dc1pube7rarx4" path="res://Background Music/8Bit Menu.wav" id="3_3eqst"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o0lai")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_13i5i")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 198.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Controls" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description of cnt" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "Move Right -  Right Arrow
+Move Left - Left Arrow
+Move Down - Down Arrow
+Move Up - Up Arrow"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="exit" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+text = "Exit"
+
+[node name="VBoxContainer" type="CanvasLayer" parent="."]
+offset = Vector2(150, 100)
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 150, 100)
+script = ExtResource("2_su5e4")
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+offset_right = 109.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Music Volume"
+
+[node name="BGM" type="HSlider" parent="VBoxContainer"]
+offset_top = 30.0
+offset_right = 109.0
+offset_bottom = 46.0
+min_value = -60.0
+max_value = 0.0
+step = 0.001
+tick_count = 5
+script = ExtResource("2_h757i")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3eqst")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="value_changed" from="VBoxContainer/BGM" to="VBoxContainer" method="_on_bgm_value_changed"]

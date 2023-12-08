@@ -11,7 +11,12 @@ var push_force = 280.0
 
 @onready var animation_tree : AnimationTree = $AnimationTree
 
+<<<<<<< Updated upstream
 @onready var animation_tree : AnimationTree = $AnimationTree
+=======
+@onready var pause_menu = $TileMap/Player8/Camera2D/PauseMenu
+var paused = false
+>>>>>>> Stashed changes
 
 #This is a test comment for testing commits
 
@@ -22,6 +27,7 @@ signal bomba_placed(bomba_scene, location)
 var bomba_scene = preload('res://Items/bomba/WeaponBomba.tscn')
 @onready var placement = $CollisionShape2D
 var direction : Vector2 = Vector2.ZERO
+
 
 
 func _ready():
@@ -36,6 +42,8 @@ func handleInput():
 	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
 	return input.normalized()
+	
+	
 	
 func playerMovement(delta):
 	input = handleInput()
@@ -71,7 +79,8 @@ func updateAnimation():
 		if Input.is_action_pressed("ui_left") && Input.is_action_pressed("ui_up"): direction = "up_left"
 		if Input.is_action_pressed("ui_right") && Input.is_action_pressed("ui_down"): direction = "down_right"
 		if Input.is_action_pressed("ui_left") && Input.is_action_pressed("ui_down"): direction = "down_left"
-	
+		if Input.is_action_just_pressed("attack"):
+			animations.play("attack")
 		animations.play(direction)
 
 func handleCollision():
@@ -83,6 +92,9 @@ func handleCollision():
 func _process(delta):
 	if Input.is_action_just_pressed("bomba"):
 		place_bomba()
+		
+#	if Input.is_action_just_pressed("pause"):
+#		pauseMenu()
 		
 	
 func _physics_process(delta):
@@ -108,3 +120,16 @@ func update_animation_parameters():
 	animation_tree["parameters/Move/blend_position"] = direction
 func place_bomba():
 	bomba_placed.emit(bomba_scene,placement.global_position)
+<<<<<<< Updated upstream
+=======
+
+#func pauseMenu():
+#	if paused:
+#		pause_menu.hide()
+#		Engine.time_scale = 1
+#	else:
+#		pause_menu.show()
+#		Engine.time_scale = 0
+#
+#	paused = !paused
+>>>>>>> Stashed changes

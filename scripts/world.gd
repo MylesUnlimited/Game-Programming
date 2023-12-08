@@ -3,14 +3,14 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	player
 
+# Called when the node enters the scene tree for the first time.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	change_scene()
+
+
 
 
 func _on_transition_point_body_entered(body):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://deq3etl7l701p"]
+[gd_scene load_steps=36 format=3 uid="uid://deq3etl7l701p"]
 
 [ext_resource type="Texture2D" uid="uid://d0uw0mb67hn58" path="res://Art/219198-14902c93fb8b1a10b23c1f10f7dc6334.png" id="1_36k7v"]
 [ext_resource type="Script" path="res://Player/player8.gd" id="1_mf2ay"]
@@ -17,6 +17,38 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [37]
+}
+
+[sub_resource type="Animation" id="Animation_ixb03"]
+resource_name = "attack_left"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [14, 20, 54, 12]
+}
+
+[sub_resource type="Animation" id="Animation_6vl8k"]
+resource_name = "attack_right"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [30, 25, 56, 24]
 }
 
 [sub_resource type="Animation" id="Animation_07jgv"]
@@ -192,6 +224,8 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hhupj"]
 _data = {
 "RESET": SubResource("Animation_nfm0x"),
+"attack_left": SubResource("Animation_ixb03"),
+"attack_right": SubResource("Animation_6vl8k"),
 "down": SubResource("Animation_07jgv"),
 "down_left": SubResource("Animation_tbylv"),
 "down_right": SubResource("Animation_dlbrl"),

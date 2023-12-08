@@ -1,15 +1,14 @@
+<<<<<<< Updated upstream
 
 res://Items/Item.tscn
 res://Items/Bomba.gd
 res://Items/Bomba.tscn
 res://Scenes/other_world.tscn
+=======
+>>>>>>> Stashed changes
 res://Scenes/world.tscn
-res://Player/player8.tscn
-res://Interactables/pushable_block.tscn
-res://Interactables/button.tscn
-res://Items/key.tscn
-res://inventory/items/key.tres
 res://inventory/items/bomba.tres
+<<<<<<< Updated upstream
 res://scripts/global.gd
 res://Items/bomba/WeaponBomba.tscn
 res://Items/bomba/WeaponBomba.gd
@@ -18,3 +17,11 @@ res://Player/player8.gd
 res://Items/bomba/Bomba.gd
 res://scripts/world.gd
 
+=======
+res://Scenes/other_world.tscn
+res://Player/player8.tscn
+res://Scenes/main_menu.tscn
+res://Scenes/settings_menu.tscn
+res://Scenes/pause_menu.tscn
+res://scripts/other_world2.gd
+>>>>>>> Stashed changes

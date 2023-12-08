@@ -1,3 +1,14 @@
+Button
+CanvasLayer
+AudioStreamPlayer2D
+Label
+VBoxContainer
+HSlider
+MarginContainer
+TextureRect
+ColorRect
+Popup
+Control
 Timer
 Sprite2D
 CollisionShape2D
