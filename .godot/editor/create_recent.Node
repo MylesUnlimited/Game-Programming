@@ -1,3 +1,6 @@
+Area2D
+CollisionShape2D
+TileMap
 AudioStreamPlayer2D
 Button
 CanvasLayer
@@ -11,8 +14,6 @@ Popup
 Control
 Timer
 Sprite2D
-CollisionShape2D
-Area2D
 Polygon2D
 CharacterBody2D
 Node2D

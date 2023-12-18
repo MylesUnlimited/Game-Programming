@@ -90,6 +90,7 @@ script = ExtResource("2_h757i")
 stream = ExtResource("3_3eqst")
 volume_db = -10.0
 autoplay = true
+bus = &"BGM"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
 [connection signal="value_changed" from="VBoxContainer/BGM" to="VBoxContainer" method="_on_bgm_value_changed"]

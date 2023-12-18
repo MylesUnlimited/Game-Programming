@@ -1,5 +1,7 @@
 extends Control
 
+#This ia Akai's work!!!
+
 @onready var main = $"res://Scenes/world.tscn"
 #@onready var pause = $PauseMenu
 

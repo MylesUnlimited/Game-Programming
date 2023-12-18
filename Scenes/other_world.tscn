@@ -7122,6 +7122,7 @@ position = Vector2(353, 25)
 stream = ExtResource("17_ql1tc")
 volume_db = -30.0
 autoplay = true
+bus = &"BGM"
 
 [connection signal="body_entered" from="transition_point" to="." method="_on_transition_point_body_entered"]
 [connection signal="body_exited" from="transition_point" to="." method="_on_transition_point_body_exited"]

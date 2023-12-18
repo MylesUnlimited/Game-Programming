@@ -5,4 +5,4 @@ res://Player/player8.tscn
 res://Scenes/main_menu.tscn
 res://Scenes/settings_menu.tscn
 res://Scenes/pause_menu.tscn
-res://Player/player8.gd
+res://Scenes/interior1.tscn

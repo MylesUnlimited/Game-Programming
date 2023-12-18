@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702056904
+::res://::1702877801
 default_bus_layout.tres::AudioBusLayout::114580144490900030::1702055771::0::1::::<><>::
 icon.svg::CompressedTexture2D::4310620124050030549::1700428910::1700429506::1::::<><>::
 README.md::TextFile::-1::1700428910::0::1::::<><>::
@@ -177,7 +177,7 @@ readme.txt::TextFile::-1::1702055771::0::1::::<><>::
 ::res://Art/inventory/::1700428910
 InventoryRect.png::CompressedTexture2D::4437202524945500028::1700428910::1700428910::1::::<><>::
 inventorySlot.png::CompressedTexture2D::773358889069755730::1700428910::1700428910::1::::<><>::
-::res://Background Music/::1702057310
+::res://Background Music/::1702057358
 8 Bit Adventure By David Renda.wav::AudioStreamWAV::1627768347180621567::1702055771::1702055771::1::::<><>::
 8Bit Land of 8 bits.wav::AudioStreamWAV::8059968043440415830::1702057233::1702057358::1::::<><>::
 8Bit Menu.wav::AudioStreamWAV::7354260090909756543::1702055771::1702055771::1::::<><>::
@@ -199,8 +199,8 @@ pushable_block.tscn::PackedScene::1847680916721583988::1701025658::0::1::::<><>:
 inventory item.gd::GDScript::-1::1700428910::0::1::::InventoryItem<>Resource<>::
 inventory.gd::GDScript::-1::1700428910::0::1::::Inventory<>Resource<>::
 player_inv.tres::Resource/Resource::3183652888348955479::1700428910::0::1::::<><>::res://inventory/inventory.gd
-::res://inventory/items/::1702056929
-bomba.tres::Resource/InventoryItem::6166087374239198469::1702056929::0::1::::<><>::res://inventory/inventory item.gd<>uid://c7jeekfkf7khp::::res://Art/Item__69.png
+::res://inventory/items/::1702478732
+bomba.tres::Resource/InventoryItem::6166087374239198469::1702478732::0::1::::<><>::res://inventory/inventory item.gd<>uid://c7jeekfkf7khp::::res://Art/Item__69.png
 key.tres::Resource/Resource::7272521032429194455::1700428910::0::1::::<><>::res://inventory/inventory item.gd<>uid://c7jeekfkf7khp
 ::res://Items/::1701025658
 Item.gd::GDScript::-1::1700428910::0::1::::<>Area2D<>::
@@ -212,24 +212,27 @@ Bomba.gd::GDScript::-1::1700428910::0::1::::<>Area2D<>::
 Bomba.tscn::PackedScene::2521666027358519933::1701025658::0::1::::<><>::uid://bmwmdc16yv3m2
 WeaponBomba.gd::GDScript::-1::1700428910::0::1::::<>CollisionShape2D<>::
 WeaponBomba.tscn::PackedScene::4437469530975466393::1701025658::0::1::::<><>::uid://bmwmdc16yv3m2
-::res://Player/::1702057330
+::res://Player/::1702477917
 player8.gd::GDScript::-1::1702057004::0::1::::<>CharacterBody2D<>::
-player8.tscn::PackedScene::7474755705075891799::1702057330::0::1::::<><>::uid://d0uw0mb67hn58::::res://Art/219198-14902c93fb8b1a10b23c1f10f7dc6334.png<>res://Player/player8.gd<>uid://blmgken8nnt08::::res://inventory/player_inv.tres
+player8.tscn::PackedScene::7474755705075891799::1702477917::0::1::::<><>::uid://d0uw0mb67hn58
 player.gd::GDScript::-1::1700428910::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::962265715634183507::1700428910::0::1::::<><>::uid://dibpp1p1pj88k
-::res://Scenes/::1702057330
-BGMSlider.gd::GDScript::-1::1702055771::0::1::::<>HSlider<>::
+::res://Scenes/::1702478735
+BGMSlider.gd::GDScript::-1::1702468525::0::1::::<>HSlider<>::
 Camera2D.gd::GDScript::-1::1700428910::0::1::::<>Camera2D<>::
-main_menu.gd::GDScript::-1::1702055771::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::1163112909812968057::1702057330::0::1::::<><>::res://Scenes/main_menu.gd<>uid://csx0akd6gp5hp::::res://Art/PixalatedArt.png<>uid://xgrdvr7mt0d4::::res://Background Music/8 Bit Adventure By David Renda.wav
+entry2.gd::GDScript::-1::1702478732::0::1::::<>Area2D<>::
+entry.gd::GDScript::-1::1702447038::0::1::::<>Area2D<>::
+interior1.tscn::PackedScene::5349917786607551139::1702478732::0::1::::<><>::uid://de2k75b7wiow6::::res://Art/TilesetDesert.png<>uid://jeiiwrivkyj::::res://Art/2_indoors.png<>uid://cigfqr2exnbvd::::res://Art/Backgrounds/Tilesets/TilesetField.png<>uid://hgm12tflshpg::::res://Art/Backgrounds/Tilesets/TilesetFloor.png<>uid://deq3etl7l701p::::res://Player/player8.tscn<>uid://eqdrsfpp3rc5::::res://Art/Backgrounds/Tilesets/TilesetHouse.png<>res://Scenes/entry2.gd
+main_menu.gd::GDScript::-1::1702478732::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::1163112909812968057::1702477917::0::1::::<><>::res://Scenes/main_menu.gd<>uid://csx0akd6gp5hp
 other_world.gd::GDScript::-1::1700428910::0::1::::<>Node2D<>::
-other_world.tscn::PackedScene::6609279415679193771::1702057330::0::1::::<><>::uid://de2k75b7wiow6::::res://Art/TilesetDesert.png<>uid://deq3etl7l701p::::res://Player/player8.tscn<>uid://cigfqr2exnbvd::::res://Art/Backgrounds/Tilesets/TilesetField.png<>uid://hgm12tflshpg::::res://Art/Backgrounds/Tilesets/TilesetFloor.png<>res://Scenes/Camera2D.gd<>uid://dp4bpsw7m5hlg::::res://Art/Backgrounds/Tilesets/TilesetNature.png<>uid://ckbrk0as5lfkb::::res://Art/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>res://UI/CanvasLayer.gd<>uid://eqdrsfpp3rc5::::res://Art/Backgrounds/Tilesets/TilesetHouse.png<>uid://gn04rlegl3ca::::res://Art/Backgrounds/Tilesets/TilesetWater.png<>uid://cclmqu2erk3hs::::res://Interactables/lock-button.tscn<>uid://jvw58cl7d5v3::::res://UI/inventory.tscn<>uid://1lbbgf1ep4u7::::res://Interactables/pushable_block.tscn<>uid://ymixf3fwrq2i::::res://Interactables/button.tscn<>uid://bb6rqasf3yg3n::::res://Items/bomba/Bomba.tscn<>uid://bpra87niwbsqt::::res://Scenes/pause_menu.tscn<>uid://dm3kq4qxqmm0u::::res://Background Music/8Bit Land of 8 bits.wav
-pause_menu.gd::GDScript::-1::1702055771::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::3474408392504070051::1702057330::0::1::::<><>::res://Scenes/pause_menu.gd
-settings_menu.gd::GDScript::-1::1702055771::0::1::::SettingsMenu<>Control<>::
-settings_menu.tscn::PackedScene::2264018464777542695::1702057330::0::1::::<><>::uid://dhwe3ije680eb::::res://Art/Pixalated Art 2.png<>res://Scenes/settings_menu.gd<>res://Scenes/BGMSlider.gd<>res://Scenes/sound_settings.gd<>uid://dc1pube7rarx4::::res://Background Music/8Bit Menu.wav
+other_world.tscn::PackedScene::6609279415679193771::1702477917::0::1::::<><>::uid://de2k75b7wiow6
+pause_menu.gd::GDScript::-1::1702478732::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::3474408392504070051::1702478735::0::1::::<><>::res://Scenes/pause_menu.gd
+settings_menu.gd::GDScript::-1::1702478732::0::1::::SettingsMenu<>Control<>::
+settings_menu.tscn::PackedScene::2264018464777542695::1702477917::0::1::::<><>::uid://dhwe3ije680eb
 sound_settings.gd::GDScript::-1::1702055771::0::1::::<>CanvasLayer<>::
-world.tscn::PackedScene::2069296446816960088::1702057329::0::1::::<><>::uid://de2k75b7wiow6::::res://Art/TilesetDesert.png<>uid://cigfqr2exnbvd::::res://Art/Backgrounds/Tilesets/TilesetField.png<>res://Scenes/Camera2D.gd<>uid://hgm12tflshpg::::res://Art/Backgrounds/Tilesets/TilesetFloor.png<>uid://b6h61jsa45xij::::res://Enemies/spiritEnemy.tscn<>uid://deq3etl7l701p::::res://Player/player8.tscn<>uid://jvw58cl7d5v3::::res://UI/inventory.tscn<>res://UI/CanvasLayer.gd<>uid://0wrrbc524qca::::res://Items/key.tscn<>uid://b7k17edqqnvvx::::res://Interactables/lock.tscn<>uid://1lbbgf1ep4u7::::res://Interactables/pushable_block.tscn<>uid://cclmqu2erk3hs::::res://Interactables/lock-button.tscn<>uid://bpra87niwbsqt::::res://Scenes/pause_menu.tscn<>uid://bt8mkn3wlo5pl::::res://Background Music/8Bit Surf.wav
+world.tscn::PackedScene::2069296446816960088::1702477916::0::1::::<><>::uid://de2k75b7wiow6
 ::res://scripts/::1702056776
 global.gd::GDScript::-1::1700428910::0::1::::<>Node<>::
 other_world2.gd::GDScript::-1::1702055771::0::1::::<>Node2D<>::
