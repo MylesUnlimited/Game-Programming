@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bt8mkn3wlo5pl"
+path="res://.godot/imported/8Bit Surf.wav-5ffd88fc0bbe7561bf5215867da85874.sample"
+
+[deps]
+
+source_file="res://Background Music/8Bit Surf.wav"
+dest_files=["res://.godot/imported/8Bit Surf.wav-5ffd88fc0bbe7561bf5215867da85874.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
